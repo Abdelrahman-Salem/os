@@ -1,0 +1,26 @@
+#!\bin\sh
+
+
+mkdir ff
+cd ff
+
+mkdir f1
+mkdir f2
+
+cd f1
+>t1.txt
+>t2.txt
+>t3.txt
+echo "eeeeeeeeeeeeeeeeeeeeeeeeee" > t1.txt
+echo "eeeeeeeeeeeeeeeesdsdsdnndsmeee" > t2.txt
+echo "ffffdddddddddddddddddddd" > t3.txt
+cp -p t1.txt ..//f2
+cd ..
+cd f2 
+> tt2.txt
+ls | wc - l >tt2.txt
+ls -d /etc/ [aA]*
+ls |wc -l
+echo $?
+
+

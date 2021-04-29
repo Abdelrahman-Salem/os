@@ -1,0 +1,25 @@
+int bytes = 0;
+int words = 0;
+int newLine = 0;
+char buffer[1];
+int file = open(/ff/f1t1.txt,O_RDONLY);
+if(file == -1){
+  printf("can not find :%s\n",myfile);
+}
+else{
+  char last = 'c'; 
+  while(read(file,buffer,1)==1){
+    bytes++;
+    if(buffer[0]==' ' && last!=' ' && last!='\n'){
+      words++;
+    }
+    else if(buffer[0]=='\n'){
+      newLine++;
+      if(last!=' ' && last!='\n'){
+        words++;
+      }
+    }
+    last = buffer[0];
+  }        
+  printf("%d %d %d %s\n",newLine,words,bytes,myfile);        
+} 
